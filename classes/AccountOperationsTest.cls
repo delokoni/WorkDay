@@ -9,5 +9,15 @@ public class AccountOperationsTest {
         // Verify
         Account savedAcc = [SELECT Description FROM Account WHERE Id = :result.getId()];
         System.assertEquals('Default Description', savedAcc.Description);
+    	//again, just for changes
+    }
+    
+    @isTest 
+    static void testGetBoolean(){
+        Test.startTest();
+        Boolean testVar = AccountOperations.isTest();
+        Test.stopTest();
+    	
+        System.assertEquals(true, testVar);
     }
 }
