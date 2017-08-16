@@ -4,4 +4,8 @@ public class AccountOperations {
         return a;
         //this is a stest
     }
+    
+    public static Boolean isTest(){
+        return true;
+    }
 }
